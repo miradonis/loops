@@ -2,8 +2,12 @@
 const imageArray = () => {
     const returnArray = [];
 
-    for (let index = 0; index < returnArray.length; index++) {
-        const element = array[index];
-        
+    for (let i = 0; i <= 100; i++) {
+        if (i < 100) {
+            returnArray.push(`image_00${i}.jpg`);
+        }       
     }
+    console.log(returnArray);
 }
+
+imageArray();
