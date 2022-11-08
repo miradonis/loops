@@ -17,7 +17,15 @@ const addLetterO = () => {
         }
         document.getElementById("output").innerHTML = loopArray.join(" ");
     } else {
-        // o und 0 sollen abwechselnd vorkommen
-        document.getElementById("output").innerHTML = "Keine Ahnung wie es weiter geht";
+        while (number < inputUser) {
+            if (number % 2 === 0) {
+                loopArray.splice(1, 0, "o");
+                number++;
+            } else {
+                loopArray.splice(1, 0, "0");
+                number++;
+            }
+        }
+        document.getElementById("output").innerHTML = loopArray.join(" ");       
     }
 }
