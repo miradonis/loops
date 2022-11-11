@@ -1,21 +1,22 @@
 
-const loopArray = ["L", "p"];
+
 
 const addLetterO = () => {
+    const loopArray = ["L", "p"];
     let number = 0;
 
     const inputUser = Number(document.getElementById("inputUser").value);
-    console.log(inputUser);
+    const output = document.getElementById("output");
 
     if (inputUser === 0) {
-        console.log("Nix 0");
-        document.getElementById("output").innerHTML = "Gib eine andere Zahl ein";
+        output.innerHTML = "Nix NULL";
     } else if (inputUser % 2 == 0) {
         while (number < inputUser) {
             loopArray.splice(1, 0, "o");
             number ++ ;
         }
-        document.getElementById("output").innerHTML = loopArray.join(" ");
+        output.style.color = "#64f71b";
+        output.innerHTML = loopArray.join("");
     } else {
         while (number < inputUser) {
             if (number % 2 === 0) {
@@ -26,6 +27,7 @@ const addLetterO = () => {
                 number++;
             }
         }
-        document.getElementById("output").innerHTML = loopArray.join(" ");       
+        output.style.color = "#64f71b";
+        output.innerHTML = loopArray.join("");       
     }
 }
